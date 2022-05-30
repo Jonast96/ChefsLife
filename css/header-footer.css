@@ -1,0 +1,270 @@
+/* DRY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+html, body {
+    background-color: #FEFDF8;
+    height: 100%;
+
+
+}
+
+.button {
+    background-color: #21343A;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    transition: all ease-in-out 0.2s;
+}
+.button:hover {
+    background-color:#19282c ;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.loading_icon {
+    margin: 0 auto;
+  }
+  .loading_icon::after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: rgb(0, 0, 0) transparent rgb(0, 0, 0) transparent;
+    animation: loading_icon 1.2s linear infinite;
+  }
+
+  @keyframes loading_icon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Nav scroll for Home and Blogs */
+
+.nav_scroll {
+    background-color: #21343A;
+    margin: 0;
+    padding: 10px 10%;
+    position: fixed;
+    width: 100%;
+
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+}
+
+.nav_noscroll {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+}
+
+.transparent_nav_color {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px 10%;
+}
+
+
+
+
+/* Header desktop */
+
+header {
+    background-color: #21343A;
+
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10%;
+    padding: 10px 0px;
+    z-index: 2;
+
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hover {
+    transition: 0.5s ease;
+}
+.hover:hover {
+    color: orange;
+}
+
+  
+  .hover {
+    position: relative;
+  }
+  .hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    transform-origin: right;
+    transition: transform 0.5s ease-out;
+  }
+  .hover:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .current_page {
+   color: orange;
+  }
+
+  .hamburger {
+      display: none;
+      cursor: pointer;
+  }
+
+  .line {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out; 
+      transition: all 0.3s ease-in-out; 
+      background-color: white;
+  }
+
+/* Footer desktop */
+
+footer {
+background-color: #21343A;
+margin-top: 100px;
+padding: 20px 0px;
+position: sticky;
+top: 100vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10%;
+    align-items: center;
+
+}
+
+.socials_image {
+    width: 30px;
+    transition: transform 0.5s;
+
+}
+
+.socials {
+    display: flex;
+    gap: 40px;
+}
+
+.socials_logo{
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+footer ul li {
+    color: white;
+    display: block;
+}
+
+
+
+.socials_image:hover {
+    transform: translatey(-5px);
+}
+
+
+
+  /* Mobile */
+
+  @media screen and (max-width:1000px) {
+
+    /* nav */
+
+    .nav_with_hamburger {
+    }
+
+nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ul_li {
+    display: none;
+
+}
+
+nav ul li {
+    display: block;
+    text-align: center;
+}
+
+
+
+.hamburger {
+    display: block;
+}
+
+.hamburger.active .line:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* footer */
+
+.footer {
+    flex-direction: column;
+    gap: 20px
+    ;
+}
+.footer_info {
+    text-align: center;
+}
+
+
+
+  }

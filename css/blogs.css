@@ -1,0 +1,269 @@
+/* Header */
+
+.blogs_background {
+  background-image: url(/images/pexels-kaboompics-com-5929-min.jpg);
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Change view */
+
+.change_view_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15% 0px;
+  gap: 20px;
+}
+.buttons {
+  display: flex;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.text_button {
+  color: black;
+}
+.no_text_button {
+  color: grey;
+}
+
+.blogs_container_notext {
+  margin: 0px 15%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.blogs-content_notext {
+  display: grid;
+  min-height: 300px;
+  text-decoration: none;
+  border-radius: 10px;
+  grid-column: span 3;
+  transition: ease-in-out 0.25s;
+  overflow: hidden;
+  margin: 15px 0px;
+
+}
+
+.blogs-content_notext:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.blogs-image_notext {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blogs-text_notext {
+  display: none;
+}
+
+.recipe_name {
+  display: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+border-radius: 10px;}
+
+.image {
+  position: relative;
+}
+
+.display_none {
+  display: none;
+}
+
+
+/* Main */
+
+main {
+  margin: 0px 0%;
+}
+
+.img1 {
+  background-image: url(/test_images/pexels-kasumi-loffler-3535383-min.jpg);
+}
+
+.img2 {
+  background-image: url(/test_images/pexels-sebastian-coman-photography-3659862-min.jpg);
+}
+
+.blogs_container {
+  margin: 0px 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.blogs-content {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 300px;
+  margin: 15px 0px;
+  background-color: #10333d;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.blogs-image {
+  grid-column: span 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.blogs-text {
+  grid-column: span 1;
+  align-self: center;
+  color: white;
+  justify-self: center;
+
+  padding: 10px;
+}
+.blogs-text-left,
+.blogs-image-right {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.blogs-image-left,
+.blogs-text-right {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.blogs-text-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+.searchbar {
+  border-radius: 15px;
+  padding: 9px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.blogs_main_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.display_more_blogs_div {
+  display: grid;
+  place-content: center;
+}
+
+.display_more_blogs {
+background-color: #FEFDF8;
+border: none;
+padding: 20px;
+font-size: 1.5rem;
+text-decoration: underline;
+cursor: pointer;
+}
+.view_more {
+  display: none;
+}
+.loading_icon  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+@media screen and (max-width: 1450px) {
+  main {
+    margin: 0px 10%;
+  }
+  .blogs_container,
+  .change_view_buttons {
+    margin: 10px 0;
+  }
+  .blogs_container_notext {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    margin: 0px 5%;
+  }
+  nav {
+    background-color: #21343a;
+    margin: 0;
+  }
+  .nav_noscroll {
+    background-color: #21343a;
+    -webkit-transition: none;
+    -ms-transition: none;
+    transition: none;
+  }
+  .blogs-content_notext {
+    grid-column: span 4;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blogs-content_notext {
+    grid-column: span 6;
+  }
+  .blogs-image, .blogs-content {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .blogs-content_notext {
+    grid-column: span 12;
+  }
+
+  .blogs-image {
+    grid-column: span 2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .blogs-text {
+    display: none;
+  }
+  .searchbar {
+    width: 100%;
+  }
+
+  .buttons {
+    display: none;
+  }
+  .recipe_name {
+    display: block;
+  }
+}
